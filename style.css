@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: wheat;
+}
+
+header {
+    background: linear-gradient(90deg, rgba(58,180,154,1) 0%, rgba(221,12,220,1) 71%, rgba(221,215,18,0.4234068627450981) 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    border-radius: 5%;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+main {
+    flex: 2; /* Main content takes 2 parts */
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+
+.sidebar {
+    flex: 1; /* Sidebar takes 1 part */
+    padding: 20px;
+    background: rgb(164,184,181);
+    border-radius: 5px;
+}
+
+.responsive-image {
+    width: 50%; /* Make image fluid */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.carousel {
+    position: relative;
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+.carousel-item {
+    display: none; /* Hide all items by default */
+}
+
+.carousel-item.active {
+    display: block; /* Show the active item */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+footer {
+    background: linear-gradient(90deg, rgba(58,180,154,1) 0%, rgba(221,12,220,1) 71%, rgba(221,215,18,0.4234068627450981) 100%);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack columns vertically on small screens */
+        margin: 10px;
+    }
+
+    main {
+        margin-right: 0; /* Remove right margin for mobile */
+    }
+
+    .sidebar {
+        margin-top: 20px; /* Add space above sidebar */
+        width: 100%; /* Full width for sidebar */
+    }
+}
